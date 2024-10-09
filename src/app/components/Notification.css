@@ -1,0 +1,48 @@
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4caf50; /* Default green background for success */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.notification.error {
+  background: #f44336; /* Red background for errors */
+}
+
+.theme {
+  margin-left: -2rem;
+}
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}

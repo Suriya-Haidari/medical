@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.nav-btn {
+  position: absolute;
+  z-index: 1000;
+  top: 0.9rem;
+  left: 0.9rem;
+}
+
+.home__container {
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.nav {
+  backdrop-filter: blur(40px);
+  box-shadow: 0px 0px 30px rgba(277, 228, 237, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* In globals.css */
+@keyframes scaling-dots {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  40%,
+  60% {
+    transform: scale(1);
+  }
+}
+
+.scaling-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scaling-dots .dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: var(--tw-bg-opacity, #0e1116);
+  border-radius: 100%;
+  animation: scaling-dots 1s infinite ease backwards;
+}
+
+.scaling-dots .dot:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.scaling-dots .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.scaling-dots .dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.scaling-dots .dot:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.scaling-dots .dot:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Contact Page */
+.article__container {
+  background-image: url(../../public/bb.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.home-image {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.home__container {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.about_img {
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.image-animated {
+  animation: moveUpDown 4s ease-in-out infinite,
+    animate__lightSpeedInRight 1s ease-in-out;
+  transition: transform 0.1s ease-out;
+}
+
+.cards__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+.cards__container .card {
+  border-radius: 1.3rem;
+  backdrop-filter: blur(80px);
+  mix-blend-mode: difference;
+}
+
+.para {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 700px) {
+  .para {
+    width: 100%;
+  }
+}
+
+.about__image {
+  height: 85vh;
+  border-radius: 2rem;
+  width: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-imgs {
+    display: none;
+  }
+}
+
+.smknw {
+  height: 190vh;
+}
+
+.nabrar {
+  background: #181717;
+  color: #fff;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.input-field {
+  width: 80%;
+  padding: 0.5rem;
+}
+.search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.weather-info {
+  margin-top: 2rem;
+}
+
+.logout {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.footer {
+  margin-left: auto;
+}
+
+.main__content {
+  height: 100vh;
+}
+
+.section {
+  height: 100vh;
+}
+
+.notifications {
+  margin-left: 1rem;
+}
+
+.section2 {
+  height: 90vh;
+}
+
+.article {
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+}
+
+.buttons__edit {
+  margin-left: auto;
+  margin-right: auto;
+}
