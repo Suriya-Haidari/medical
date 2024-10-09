@@ -70,9 +70,9 @@ export default function EditForm() {
     }
   };
 
-  const handleCloseNotification = () => {
-    setNotification(null);
-  };
+  // const handleCloseNotification = () => {
+  //   setNotification(null);
+  // };
 
   return (
     <div className="flex flex-col items-center justify-center w-full p-6">

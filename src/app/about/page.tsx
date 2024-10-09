@@ -5,6 +5,7 @@ import AuthRoute from "../auth/auth";
 import { clientReviews, imagesData } from "./data.tsx";
 import "./style.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -16,11 +17,12 @@ export default function About() {
 
         <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-6xl">
           <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
-            <img
+            {/* <img
               src="/de.png"
               alt="About Our Hospital"
               className="rounded-lg w-full about_img"
-            />
+            /> */}
+            <Image src="/de.png" alt="Description" width={500} height={300} />
           </div>
 
           <div className="w-full lg:w-1/2 lg:ml-8 flex flex-col justify-center items-center text-center">

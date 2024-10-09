@@ -8,6 +8,7 @@ import Graph from "./Chart";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Notif from "../emergency/Notif";
+import Image from "next/image";
 
 const navigation = [
   { name: "Dashboard", href: "/", current: true },
@@ -127,10 +128,16 @@ export default function AdminDashboard() {
                   <Menu as="div" className="relative">
                     <Menu.Button className="flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
-                      <img
+                      {/* <img
                         className="h-8 w-8 rounded-full"
                         src="/default.jpg"
                         alt=""
+                      /> */}
+                      <Image
+                        src="/default.jpg"
+                        alt="Description"
+                        width={30}
+                        height={30}
                       />
                     </Menu.Button>
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5">

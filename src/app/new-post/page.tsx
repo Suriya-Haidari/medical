@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Notification from "../components/notification";
-import Notif from "../emergency/Notif";
+// import Notif from "../emergency/Notif";
 import Cookies from "js-cookie";
+import Image from "next/image";
 
 export default function CreateForm() {
   const [title, setTitle] = useState("");
@@ -206,16 +207,29 @@ export default function CreateForm() {
           </label>
           <div className="w-full h-48 border border-gray-300 rounded-md overflow-hidden">
             {image ? (
-              <img
+              <Image
                 src={URL.createObjectURL(image)} // Create a URL for the selected image
-                alt="Preview"
+                alt="Preview" // Provide an appropriate alt text
                 className="object-cover w-full h-full"
+                layout="responsive" // Set the layout as needed
+                width={500} // Set a width that makes sense for your layout
+                height={300} // Set a height that makes sense for your layout
               />
             ) : (
-              <img
+              // <Image
+              //   src="placeholder.png"
+              //   alt="Placeholder"
+              //   className="object-cover w-full h-full"
+              // />
+
+              // Replace <img> with <Image />
+              <Image
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src="placeholder.png"
-                alt="Placeholder"
-                className="object-cover w-full h-full"
+                alt="Preview"
+                layout="responsive"
+                width={500} // Specify a width
+                height={300} // Specify a height
               />
             )}
           </div>

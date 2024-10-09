@@ -90,7 +90,7 @@ const SignInForm = () => {
           href="/register"
           className="block mt-4 text-teal-500 dark:text-gray-200"
         >
-          Don't have an account? Sign up here
+          Don&apos;t have an account? Sign up here
         </a>
       </form>
     </div>

@@ -16,6 +16,10 @@ export default function Process({ images }: Process) {
   const imageRefs = useRef<HTMLDivElement[]>([]); // Store refs for all images
 
   useEffect(() => {
+    // Store the current refs in local variables
+    const currentTextRef = textRef.current;
+    const currentImageRefs = imageRefs.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -43,14 +47,20 @@ export default function Process({ images }: Process) {
       { threshold: 0.2 }
     );
 
-    if (textRef.current) observer.observe(textRef.current);
-    imageRefs.current.forEach((image) => observer.observe(image));
+    // Observe the elements
+    if (currentTextRef) observer.observe(currentTextRef);
+    currentImageRefs.forEach((image) => {
+      if (image) observer.observe(image);
+    });
 
+    // Cleanup
     return () => {
-      if (textRef.current) observer.unobserve(textRef.current);
-      imageRefs.current.forEach((image) => observer.unobserve(image));
+      if (currentTextRef) observer.unobserve(currentTextRef);
+      currentImageRefs.forEach((image) => {
+        if (image) observer.unobserve(image);
+      });
     };
-  }, []);
+  }, []); // Empty dependency array to run effect only once
 
   return (
     <div className="w-full dark:bg-natura-900 flex flex-col items-center justify-center">

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Btn from "../home/Btn.tsx";
 import Services from "./Services";
@@ -34,10 +35,18 @@ const Example: React.FC = () => {
           </Link>
         </div>
       </div>
-      <img
+      {/* <img
         src="/background12.jpg"
         className="about__image w-full object-cover"
         alt="About Image"
+      /> */}
+      <Image
+        src="/background12.jpg"
+        alt="Preview" // Provide an appropriate alt text
+        layout="responsive" // Set the layout as needed
+        className="about__image w-full object-cover"
+        width={500}
+        height={500}
       />
       <br />
       <br />
