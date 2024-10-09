@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 config.autoAddCss = false; // Prevent Font Awesome from adding its CSS automatically
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Head>
