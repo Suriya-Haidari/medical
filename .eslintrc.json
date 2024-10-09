@@ -7,6 +7,8 @@
   "rules": {
     "react-hooks/exhaustive-deps": "off", // Disable exhaustive-deps rule
     "react/prop-types": "off", // Disable prop-types rule if you're using TypeScript or don't need it
-    "no-console": "off" // This will disable the no-console rule
+    "no-console": "off", // This will disable the no-console rule
+    "next/no-img-element": "off",
+    "react/no-unescaped-entities": "off"
   }
 }
