@@ -7,7 +7,7 @@ import {
   setParagraph,
 } from "../store/slices/editSlice";
 import { updateItem } from "../store/slices/itemsSlice";
-import Notification from "../components/Notification";
+import Notification from "../components/notification";
 
 export default function EditForm() {
   const dispatch = useDispatch();
