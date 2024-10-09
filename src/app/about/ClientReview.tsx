@@ -91,7 +91,7 @@ interface ClientReviewProps {
 }
 
 export default function ClientReview({ reviews }: ClientReviewProps) {
-  const cardRefs = useRef<HTMLDivElement[]>([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const handleMouseEnter = () => {
     document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
