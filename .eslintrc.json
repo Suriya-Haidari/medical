@@ -7,6 +7,6 @@
   "rules": {
     "react-hooks/exhaustive-deps": "off", // Disable exhaustive-deps rule
     "react/prop-types": "off", // Disable prop-types rule if you're using TypeScript or don't need it
-    "no-console": "warn" // Warn about console logs, change to "off" to disable it completely
+    "no-console": "off" // This will disable the no-console rule
   }
 }
