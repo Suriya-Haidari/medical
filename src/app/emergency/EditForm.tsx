@@ -7,7 +7,7 @@ import {
   setParagraph,
 } from "../store/slices/editSlice";
 import { updateItem } from "../store/slices/itemsSlice";
-import Notification from "../components/Notification";
+// import Notification from "../components/Notification.tsx";
 
 export default function EditForm() {
   const dispatch = useDispatch();
@@ -174,14 +174,14 @@ export default function EditForm() {
         </button>
       </form>
 
-      {/* Notification component */}
+      {/* Notification component
       {notification && (
         <Notification
           message={notification.message}
           type={notification.type}
           onClose={handleCloseNotification}
         />
-      )}
+      )} */}
     </div>
   );
 }
