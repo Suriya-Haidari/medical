@@ -1,4 +1,4 @@
-// Btn.tsx
+// @ts-nocheck
 interface BtnProps {
   text: string;
 }

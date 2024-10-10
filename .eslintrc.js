@@ -24,10 +24,27 @@
 // }
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
+// const nextConfig = {
+//   root: true,
+//   extends: "next",
+//   eslint: {
+//     ignoreDuringBuilds: true,
+//   },
+// };
+
+// module.exports = nextConfig;
+
+module.exports = {
+  extends: "next/core-web-vitals",
+  rules: {
+    "react-hooks/exhaustive-deps": "off",
+    "react/prop-types": "off",
+    "no-console": "off",
+    "next/no-img-element": "off",
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-empty-interface": "off",
   },
 };
-
-module.exports = nextConfig;

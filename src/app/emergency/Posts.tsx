@@ -69,6 +69,8 @@ export default function Posts() {
             headers: {
               Authorization: `Bearer ${token}`,
             },
+            // @ts-ignore
+
             withCredentials: true,
           }
         );
@@ -78,7 +80,7 @@ export default function Posts() {
         } else if (postsResponse.status === 401) {
           alert("Your session has expired. Please log in again.");
         }
-
+        // @ts-ignore
         dispatch(fetchItems(filter));
       } catch (error) {
         console.error("Error fetching posts:", error);

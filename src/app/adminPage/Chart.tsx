@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { ChartOptions } from "chart.js";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -91,12 +92,48 @@ export default function AdminDashboard() {
     ],
   };
 
-  const options = {
+  // const options = {
+  //   responsive: true,
+  //   maintainAspectRatio: false,
+  //   plugins: {
+  //     legend: {
+  //       position: "top",
+  //     },
+  //     title: {
+  //       display: true,
+  //       text: "User Registrations Over Time",
+  //     },
+  //   },
+  //   scales: {
+  //     x: {
+  //       type: "time",
+  //       time: {
+  //         unit: "day",
+  //       },
+  //       title: {
+  //         display: true,
+  //         text: "Date",
+  //       },
+  //       ticks: {
+  //         autoSkip: true,
+  //         maxTicksLimit: 10,
+  //       },
+  //     },
+  //     y: {
+  //       title: {
+  //         display: true,
+  //         text: "Number of Registrations",
+  //       },
+  //     },
+  //   },
+  // };
+
+  const options: ChartOptions<"line"> = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: "top",
+        position: "top", // Change to one of the expected values
       },
       title: {
         display: true,

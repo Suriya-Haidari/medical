@@ -31,7 +31,6 @@ export default function HandleGoogleLogin() {
           path: "/",
           sameSite: "Lax",
         });
-        console.log("Token cookie set:", token); // Log to confirm cookie is set
       }
     } catch (error) {
       console.error("Failed to handle callback", error);

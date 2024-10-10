@@ -349,7 +349,11 @@ const ProductPage: React.FC = () => {
           filteredDepartments.map((department, index) => (
             <div
               key={department.id}
-              ref={(el) => (cardRefs.current[index] = el!)}
+              ref={(el) => {
+                if (el) {
+                  cardRefs.current[index] = el; // Correctly assign the element
+                }
+              }}
               className="bg-white shadow-lg rounded-lg overflow-hidden card-initial"
             >
               <Image
@@ -369,6 +373,7 @@ const ProductPage: React.FC = () => {
           <p className="text-center">No results found</p>
         )}
       </div>
+
       <br />
       <br />
       <br />

@@ -47,7 +47,7 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="flex flex-col p-4 items-center justify-center w-full section bg-red">
+    <div className="flex flex-col p-4 items-center justify-center w-full section ">
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md mx-auto text-black"

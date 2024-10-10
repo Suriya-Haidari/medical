@@ -1,6 +1,6 @@
 "use client";
 import Info from "./Cards";
-import Btn from "./Btn.tsx";
+import Btn from "./Btn";
 import { useEffect } from "react";
 import { doctorsData, hospitalData } from "./data";
 import "./style.css";

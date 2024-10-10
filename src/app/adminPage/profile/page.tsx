@@ -181,7 +181,7 @@ export default function UserProfile() {
           </div>
         )}
 
-        {isEditing && <EditProfile onClose={() => setIsEditing(false)} />}
+        {isEditing && <EditProfile />}
       </div>
     </div>
   );

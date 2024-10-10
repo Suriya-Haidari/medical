@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAuthenticated } from "../store/slices/authSlice";
 import Cookies from "js-cookie";
 import HandleGoogleLogin from "../auth/HandleLogin";
+import { RootState } from "../store/store";
 
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
@@ -16,7 +17,10 @@ const RegisterForm = () => {
 
   const router = useRouter();
   const dispatch = useDispatch();
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  // const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector(
+    (state: RootState) => state.auth.isAuthenticated
+  );
 
   useEffect(() => {
     const checkAuthStatus = async () => {

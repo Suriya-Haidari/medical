@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Btn from "../home/Btn.tsx";
+import Btn from "../home/Btn";
 import Services from "./Services";
 import { services } from "./data";
 

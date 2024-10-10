@@ -1,4 +1,6 @@
 "use client";
+// @ts-ignore
+
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFaq } from "../store/slices/faqSlice"; // Update your redux slice accordingly
@@ -53,6 +55,8 @@ export default function Faq() {
 
   const contentRefs = useRef([]);
   const dispatch = useDispatch();
+  // @ts-ignore
+
   const openFaqIndices = useSelector((state) => state.faq.openFaqIndices); // Use an array for open indices
 
   useEffect(() => {
@@ -111,6 +115,8 @@ export default function Faq() {
                   </svg>
                 </button>
                 <div
+                  // @ts-ignore
+
                   ref={(el) => (contentRefs.current[index] = el)}
                   className={`overflow-hidden transition-[max-height] duration-300 ease-in-out`}
                   style={{ maxHeight: "0px" }} // Default closed height

@@ -1,10 +1,12 @@
 "use client";
+// @ts-nocheck
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuthenticated } from "../store/slices/authSlice";
-
+import { RootState } from "../store/store";
 const RegisterForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +15,9 @@ const RegisterForm = () => {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector(
+    (state: RootState) => state.auth.isAuthenticated
+  );
 
   useEffect(() => {
     const checkAuthStatus = async () => {

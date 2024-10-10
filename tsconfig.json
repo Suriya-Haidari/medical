@@ -1,3 +1,38 @@
+// {
+//   "compilerOptions": {
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "allowJs": true, // Allow JavaScript files to be compiled
+//     "skipLibCheck": true, // Skip type checking for declaration files
+//     "strict": false, // Disable all strict type-checking options
+//     "noEmit": true, // Do not emit output
+//     "esModuleInterop": true, // Enable emit interoperability between CommonJS and ES Modules
+//     "module": "esnext", // Specify module code generation
+//     "moduleResolution": "bundler", // Use bundler strategy for module resolution
+//     "resolveJsonModule": true, // Include modules imported with .json extension
+//     "isolatedModules": true, // Ensure each file can be transpiled independently
+//     "jsx": "preserve", // Preserve JSX as-is
+//     "incremental": true, // Enable incremental compilation
+//     "plugins": [
+//       {
+//         "name": "next" // Next.js plugin for TypeScript
+//       }
+//     ],
+//     "paths": {
+//       "@/*": ["./src/*"] // Alias for easier imports
+//     }
+//   },
+//   "include": [
+//     "next-env.d.ts",
+//     "**/*.ts",
+//     "**/*.tsx",
+//     ".next/types/**/*.ts",
+//     ".next/types/app/adminPage/page.tsx",
+//     ".next/types/app/signin/page.tsx",
+//     "src/app/adminPage/UsersControllers"
+//   ],
+//   "exclude": ["node_modules"] // Exclude node_modules folder
+// }
+
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],

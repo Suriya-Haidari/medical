@@ -187,7 +187,7 @@
 import { useState } from "react";
 import Image from "next/image"; // Import Image from next/image
 
-export default function XRowCards() {
+const Doctors = ({ doctorsData }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const cards = [
     {
@@ -300,4 +300,6 @@ export default function XRowCards() {
       </div>
     </div>
   );
-}
+};
+
+export default Doctors;

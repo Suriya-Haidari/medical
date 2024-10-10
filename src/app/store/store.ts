@@ -8,6 +8,10 @@ import authReducer from "./slices/authSlice";
 import expandedItemState from "./slices/expandedItemState";
 import userReducer from "./slices/userSlice";
 import profileReducer from "./slices/profileSlice";
+// types.ts
+export interface AuthState {
+  isAuthenticated: boolean;
+}
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;

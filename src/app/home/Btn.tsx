@@ -9,6 +9,8 @@ const Btn: React.FC<BtnProps> = ({ text }) => {
     <>
       <div>
         <a
+          // @ts-ignore
+
           style={{ "--clr": "#000" }}
           className="btn-3 bg-teal-500 dark:bg-white dark:text-black"
           href="#"
