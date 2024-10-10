@@ -22,7 +22,7 @@
 // {
 //   "extends": "next/core-web-vitals"
 // }
-/** @type {import ('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 
 const nextConfig = {
   eslint: {

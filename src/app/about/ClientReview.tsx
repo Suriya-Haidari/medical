@@ -143,7 +143,9 @@ export default function ClientReview({ reviews }: ClientReviewProps) {
         {reviews.map((review, index) => (
           <div
             key={review.id}
-            ref={(el) => (cardRefs.current[index] = el!)}
+            ref={(el) => {
+              cardRefs.current[index] = el;
+            }}
             className="card__2 opacity-0 transform translate-y-[20px]"
           >
             <div className="circle">
