@@ -14,7 +14,7 @@ interface Product {
 }
 
 interface CardsProps {
-  products: Product[];
+  doctorsData: Product[];
 }
 
 export default function Doctors({ doctorsData }: CardsProps) {
@@ -59,7 +59,11 @@ export default function Doctors({ doctorsData }: CardsProps) {
           {doctorsData.map((doctor, index) => (
             <div
               key={doctor.id}
-              ref={(el) => (productCardsRef.current[index] = el!)} // Add ref for each card
+              ref={(el) => {
+                if (el) {
+                  productCardsRef.current[index] = el;
+                }
+              }}
               className="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30 opacity-0 translate-y-10"
             >
               <div className="h-72 w-full">
