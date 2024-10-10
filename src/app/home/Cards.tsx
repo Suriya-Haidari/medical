@@ -46,7 +46,6 @@ export default function Explore({ hospitalData }: ExploreProps) {
         <div
           key={index}
           // @ts-ignore
-
           ref={(el) => (cardRefs.current[index] = el!)}
           className="w-48 h-48 dark:bg-neutral-900 flex-shrink-0 rounded-lg overflow-hidden transition duration-300 text-center mb-4 bg-transparent transform hover:scale-105 translate-x-[-20px]"
         >
