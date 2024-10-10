@@ -87,6 +87,7 @@ interface ClientReviewProps {
     title: string;
     description: string;
     linkText: string;
+    name: string;
   }[];
 }
 

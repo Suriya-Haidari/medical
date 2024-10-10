@@ -2,7 +2,7 @@
 import ClientReview from "./ClientReview";
 import Process from "./Process";
 import AuthRoute from "../auth/auth";
-import { clientReviews, imagesData } from "./data.tsx";
+import { clientReviews, imagesData } from "./data";
 import "./style.css";
 import Link from "next/link";
 import Image from "next/image";
